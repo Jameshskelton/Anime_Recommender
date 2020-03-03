@@ -7,7 +7,6 @@ I chose to conduct this analysis because I did not want to sit in front of my co
 I opted to use Azathoth42's Kaggle myanimelist dataset to provide the reviews for this analysis (https://www.kaggle.com/azathoth42/myanimelist)
 
 ## EDA
-____________________________________________________________________________________
 
 The total amount of reviews in the the corpus was 31,284,030. The average rating by a user was 4.65, and the average anime rating was 6.14. The reviews date from 2006-09-27 to 2018-05-22. Here are some histograms for the dataset: 
 
@@ -23,7 +22,6 @@ Furthermore, while there exist 'power reviewers' (the most reviews left by any o
 
 
 ## Cleaning & Analysis 
-____________________________________________________________________________________
 
 After performing EDA, a number of cleaning actions were made to reduce the high amount of reviews with a zero rating. 
 
@@ -38,7 +36,6 @@ ________________________________________________________________________________
 PySpark's Alternating Least Squares matrix factorization model was applied for this analysis. A custom script using this model was made that would first generate the predictions it was able to using matrix factorization, then loop back through to generate average values for each anime using the given scores, and then a final loop to fill the missing values from loop one with the second loop values (see src/recommender_anime.py).
 
 ## Results
-____________________________________________________________________________________
 
 The model was able to achieve a peak Root Mean Squared Error (RMSE) of 1.614. 
 Here is a histogram showing the distribution of the counts of the actual versus predicted anime ratings:
@@ -51,7 +48,7 @@ In the end, i believe the failures of this model are largely related to how miss
 
 
 ## Next Steps and Future Work
-____________________________________________________________________________________
+
 
 The first major next step for this project would be to build a second recommender system using the same dataset. There 56 features in total that could have been used, so i would like to generate a content-based recommender using these features. This new model could then be hybridized with my current model to yield, in theory, a more predictive model than either on their own. 
 
@@ -62,7 +59,6 @@ Thank you for taking the time to read about this project! Please reach out to me
 
 
 ## Acknowledgements
-____________________________________________________________________________________
 
 Thanks to Dan Rupp, Dr. Joe Gartner, and Brent Goldberg for their guidance during this project. I would have missed so many steps without your assistance along the way. 
 
