@@ -8,7 +8,7 @@ I opted to use Azathoth42's Kaggle myanimelist dataset to provide the reviews fo
 ## EDA
 The total amount of reviews in the the corpus was 31,284,030. The average rating by a user was 4.65, and the average anime rating was 6.14. The reviews date from 2006-09-27 to 2018-05-22. Here are some histograms for the dataset:
 
-![Histogram of individual anime's counts of ratings](https://github.com/Jameshskelton/Anime_Recommender/blob/master/images/anime_ratings_hist.png)
+
 
 ![Histogram of individual user's counts of ratings](https://github.com/Jameshskelton/Anime_Recommender/blob/master/images/user_ratings_hist.png)
 
