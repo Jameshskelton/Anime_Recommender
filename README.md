@@ -8,11 +8,11 @@ I opted to use Azathoth42's Kaggle myanimelist dataset to provide the reviews fo
 ## EDA
 The total amount of reviews in the the corpus was 31,284,030. The average rating by a user was 4.65, and the average anime rating was 6.14. The reviews date from 2006-09-27 to 2018-05-22. Here are some histograms for the dataset:
 
-!(Histogram of individual anime's counts of ratings)[https://github.com/Jameshskelton/Anime_Recommender/blob/master/images/anime_ratings_hist.png]
+![Histogram of individual anime's counts of ratings](https://github.com/Jameshskelton/Anime_Recommender/blob/master/images/anime_ratings_hist.png)
 
-!(Histogram of individual user's counts of ratings)[https://github.com/Jameshskelton/Anime_Recommender/blob/master/images/user_ratings_hist.png]
+![Histogram of individual user's counts of ratings](https://github.com/Jameshskelton/Anime_Recommender/blob/master/images/user_ratings_hist.png)
 
-!(The original distribution of scores in the corpus)[https://github.com/Jameshskelton/Anime_Recommender/blob/master/images/original_dist_score.png]
+![The original distribution of scores in the corpus](https://github.com/Jameshskelton/Anime_Recommender/blob/master/images/original_dist_score.png)
 
 As you can see in these histograms, there were a massive amount of reviews with a score of 0 compared to the others, comprising around a third of the original dataset. Most of the measures taken to determine which data was passed to the model were done to deal with this unusual data characteristic
 
@@ -31,7 +31,7 @@ PySpark's Alternating Least Squares matrix factorization model was applied for t
 ## Results
 The model was able to achieve a peak Root Mean Squared Error (RMSE) of 1.614. Here is a histogram showing the distribution of the counts of the actual versus predicted anime ratings:
 
-!(Histogram of the actual rating counts versus the predicted rating counts)[https://github.com/Jameshskelton/Anime_Recommender/blob/master/images/preds_v_actuals.png]
+![Histogram of the actual rating counts versus the predicted rating counts](https://github.com/Jameshskelton/Anime_Recommender/blob/master/images/preds_v_actuals.png)
 
 As you can see, the model was able to succesfully predict much of the more middle range of scores, but struggled with the ends of the scoring range. In particular, it was still unable to capture the high amount of present 0 ratings. It was also unable to model the 8-10 range of ratings as well as the rest of the scores.
 
