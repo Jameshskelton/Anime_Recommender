@@ -38,7 +38,7 @@ As you can see, the model was able to succesfully predict much of the more middl
 In the end, i believe the failures of this model are largely related to how missing values were filled. Using the average rating for each anime works well as a stopgap for a better method, but it is evident from this histogram that this method does not address the problem very well.
 
 ## Next Steps and Future Work
-The first major next step for this project would be to build a second recommender system using the same dataset. There 56 features in total that could have been used, so i would like to generate a content-based recommender using these features. This new model could then be hybridized with my current model to yield, in theory, a more predictive model than either on their own.
+The first major next step for this project would be to build a second recommender system using the same dataset. There are 56 features in total that could have been used, so i would like to generate a content-based recommender using these features. This new model could then be hybridized with my current model to yield, in theory, a more predictive model than either on their own.
 
 After that work is completed, I have reached out to developers about creating a web application for the recommender. Please look here for updates on the project
 
